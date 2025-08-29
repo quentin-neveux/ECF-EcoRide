@@ -1,0 +1,112 @@
+:root {
+  /* Palette Bootstrap (overrides) */
+  --bs-primary:   rgb(21, 49, 16);           /* vert écolo */
+  --bs-secondary: rgb(96, 130, 96);           /* vert désaturé clair */
+  --bs-success:   rgb(87, 133, 91);            /* vert pastel */
+  --bs-danger:    rgb(255, 199, 126);              /* orange pastel */
+  --bs-dark:      rgb(21, 49, 16);              /* vert foncé */
+  --bs-light:     rgb(245, 240, 230);          /* crème */
+
+  /* Versions RGB (utilisées par Bootstrap utilities) */
+  --bs-primary-rgb:   42, 122, 11;
+  --bs-secondary-rgb: 96, 130, 96;
+  --bs-success-rgb:   87, 133, 91;
+  --bs-danger-rgb:    255, 199, 126;
+  --bs-dark-rgb:      21, 49, 16;
+  --bs-light-rgb:     245, 240, 230;
+}
+/* Force les .btn-primary à utiliser ta couleur primaire */
+.btn-primary{
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
+  /* états */
+  --bs-btn-hover-bg: color-mix(in srgb, var(--bs-primary) 85%, rgb(0, 0, 0));
+  --bs-btn-hover-border-color: color-mix(in srgb, var(--bs-primary) 85%, black);
+  --bs-btn-active-bg: color-mix(in srgb, var(--bs-primary) 80%, black);
+  --bs-btn-active-border-color: color-mix(in srgb, var(--bs-primary) 80%, black);
+}
+.btn-secondary{
+  --bs-btn-color: rgb(255, 255, 255);
+  --bs-btn-bg: var(--bs-secondary);
+  --bs-btn-border-color: var(--bs-secondary);
+  --bs-btn-focus-shadow-rgb: var(--bs-secondary-rgb);
+  /* états */
+  --bs-btn-hover-bg: color-mix(in srgb, var(--bs-secondary) 85%, rgb(0, 0, 0));
+  --bs-btn-hover-border-color: color-mix(in srgb, var(--bs-secondary) 85%, black);
+  --bs-btn-active-bg: color-mix(in srgb, var(--bs-secondary) 80%, black);
+  --bs-btn-active-border-color: color-mix(in srgb, var(--bs-secondary) 80%, black);
+}
+.hero-home {
+  width: 100%;
+  height: 45vh; /* par défaut : bannière fine sur desktop */
+  background: url("/images/ecoride-hero.jpg") 50% 28% no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero-home h1 {
+  transform: translateY(-25%); /* remonte uniquement le titre */
+  margin-top: 0;/* supprime toute marge par défaut */
+  margin-bottom: 90px;
+}
+.hero-home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero-home > div {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero spécifique à la page covoiturer */
+.hero-covoiturer {
+  width: 100%;
+  height: 45vh; /* tu peux garder 45vh comme tu voulais */
+  background: url("/images/hero-covoiturer.jpg") 50% 28% no-repeat;
+  background-size: cover;
+  background-position: center; /* focus vers le haut pour garder les visages */
+  position: relative;
+}
+
+.hero-covoiturer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* filtre 50% */
+}
+
+.hero-covoiturer > div {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .hero-home .hero-covoiturer {
+    height: 50vh; /* un peu plus haut sur tablette/mobile */
+  }
+
+  .hero-home h1 .hero-covoiturer h1 {
+    font-size: 2rem; /* réduit la taille du titre pour ne pas déborder */
+  }
+
+  .hero-home p .hero-covoiturer p {
+    font-size: 1rem;
+  }
+}
+/* --- Social Icons --- */
+.social-icons a{
+  display:inline-block;
+  transition: color .2s ease, transform .2s ease;
+}
+.social-icons a:hover{
+  color: var(--bs-secondary);
+  transform: translateY(-2px);
+}
