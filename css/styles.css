@@ -68,10 +68,10 @@
 /* Hero spécifique à la page covoiturer */
 .hero-covoiturer {
   width: 100%;
-  height: 45vh; /* tu peux garder 45vh comme tu voulais */
+  height: 45vh; 
   background: url("/images/hero-covoiturer.jpg") 50% 28% no-repeat;
   background-size: cover;
-  background-position: center; /* focus vers le haut pour garder les visages */
+  background-position: center; 
   position: relative;
 }
 
@@ -79,13 +79,63 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.5); /* filtre 50% */
+  background: rgba(0,0,0,0.5);
 }
 
 .hero-covoiturer > div {
   position: relative;
   z-index: 1;
 }
+/* Hero spécifique à la page connexion */
+.hero-login {
+  width: 100%;
+  height: 45vh; 
+  background: url("/images/hero-login.jpg") 50% 28% no-repeat;
+  background-size: cover;
+  background-position: center; 
+  position: relative;
+}
+/* Hero spécifique à la page contact */
+.hero-contact {
+  width: 100%;
+  height: 45vh; 
+  background: url("/images/hero-contact.jpg") 50% 28% no-repeat;
+  background-size: cover;
+  background-position: 50% 33%; /* 50% horizontal (center), 0% vertical (top) */
+  position: relative;
+}
+.hero-contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* filtre 50% pour assombrir */
+}
+.hero-contact > div {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-login::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* filtre 50% */
+}
+
+.hero-login > div {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-trajets {
+  width: 100%;
+  height: 45vh; /* tu peux garder 45vh comme tu voulais */
+  background: url("/images/hero-trajets.jpg") 50% 28% no-repeat;
+  background-size: cover;
+  background-position: center; /* focus vers le haut pour garder les visages */
+  position: relative;
+}
+
 
 /* --- Responsive --- */
 @media (max-width: 768px) {

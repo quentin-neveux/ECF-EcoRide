@@ -1,0 +1,79 @@
+<!-- Hero Trajets -->
+<section class="hero-trajets d-flex align-items-center justify-content-center text-center">
+  <div class="text-white">
+    <h1 class="display-5 fw-bold">L'aventure à portée de clic</h1>
+    <p class="lead mb-4">Chaque trajet compte pour demain.</p>
+  </div>
+</section>
+
+<!-- pages/trajet.html -->
+<section class="py-5 bg-light-section">
+  <div class="container">
+    <h1 class="text-center mb-4">Rechercher un trajet</h1>
+    <form class="row g-3 needs-validation" novalidate>
+      
+      <!-- Départ -->
+      <div class="col-md-6">
+        <label for="departure" class="form-label">Départ</label>
+        <input type="text" class="form-control" id="departure" name="departure" placeholder="Ville ou adresse" required>
+        <div class="invalid-feedback">Merci d'indiquer un lieu de départ.</div>
+      </div>
+      
+      <!-- Arrivée -->
+      <div class="col-md-6">
+        <label for="arrival" class="form-label">Arrivée</label>
+        <input type="text" class="form-control" id="arrival" name="arrival" placeholder="Ville ou adresse" required>
+        <div class="invalid-feedback">Merci d'indiquer un lieu d'arrivée.</div>
+      </div>
+      
+      <!-- Date -->
+      <div class="col-md-6">
+        <label for="date" class="form-label">Date</label>
+        <input type="date" class="form-control" id="date" name="date" required>
+        <div class="invalid-feedback">Merci de sélectionner une date.</div>
+      </div>
+      
+      <!-- Heure -->
+      <div class="col-md-6">
+        <label for="time" class="form-label">Heure de départ</label>
+        <input type="time" class="form-control" id="time" name="time" required>
+        <div class="invalid-feedback">Merci de préciser une heure de départ.</div>
+      </div>
+      
+      <!-- Passagers -->
+      <div class="col-md-6">
+        <label for="passengers" class="form-label">Nombre de passagers</label>
+        <select class="form-select" id="passengers" name="passengers" required>
+          <option value="">Choisissez...</option>
+          <option value="1">1 passager</option>
+          <option value="2">2 passagers</option>
+          <option value="3">3 passagers</option>
+          <option value="4">4 passagers</option>
+        </select>
+        <div class="invalid-feedback">Merci de sélectionner le nombre de passagers.</div>
+      </div>
+      
+      <!-- Bouton -->
+    <div class="col-12 text-center">
+      <button class="btn btn-primary btn-lg px-5 custom-btn-hover" type="submit">Rechercher</button>
+    </div>
+    </form>
+  </div>
+</section>
+
+<script>
+// Validation Bootstrap
+(() => {
+  'use strict'
+  const forms = document.querySelectorAll('.needs-validation')
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+</script>

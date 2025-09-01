@@ -1,0 +1,86 @@
+<!-- Hero contact -->
+<section class="hero-contact d-flex align-items-center justify-content-center text-center">
+  <div class="text-white">
+    <h1 class="display-5 fw-bold">Coucou, c'est nous !</h1>
+    <p class="lead mb-4">Nous sommes là pour répondre à vos questions.</p>
+    <a href="/inscription" data-link class="btn btn-light btn-lg px-4">Devenir membre</a>
+  </div>
+</section>
+<!-- Présentation -->
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h2 class="mb-4 text-center">Notre mission</h2>
+<p>
+  EcoRide est né d'un constat <strong>simple</strong> : nos trajets quotidiens pèsent lourd sur <span class="text-primary"><strong>l'environnement</strong></span>, alors même qu'une grande partie des voitures roulent à moitié vides. 
+  Notre ambition est de transformer cette habitude en une <em>opportunité positive</em>.
+</p>
+
+<p>
+  Nous proposons une <strong>plateforme de covoiturage</strong> locale et accessible, 
+  qui met en relation conducteurs et passagers partageant un même itinéraire. 
+  Au-delà du simple transport, EcoRide veut encourager une mobilité plus 
+  <em>humaine</em>, plus <strong>économique</strong> et surtout plus 
+  <span class="text-primary"><strong>écologique</strong></span>.
+</p>
+
+<ul>
+  <li>Réduire les <span class="text-primary"><strong>émissions de CO₂</strong></span></li>
+  <li><strong>Désengorger les routes</strong> et faciliter la circulation</li>
+  <li>Créer du lien social au quotidien</li>
+  <li><strong>Alléger les frais</strong> de déplacement</li>
+</ul>
+
+<p>
+  Notre vision est claire : la mobilité de demain sera 
+  <strong>collective</strong>, intelligente et 
+  <span class="text-primary"><strong>durable</strong></span>. 
+  EcoRide s'inscrit dans cette transition en rendant le covoiturage 
+  simple, intuitif et agréable pour tous.
+</p>
+
+
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="text-center mb-4">Contactez-nous</h2>
+
+        <form action="/send-message" method="post" novalidate>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+            <div class="invalid-feedback">Merci d'indiquer votre nom.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Adresse email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <div class="invalid-feedback">Merci d'indiquer une adresse valide.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="subject" class="form-label">Sujet</label>
+            <input type="text" class="form-control" id="subject" name="subject" required>
+            <div class="invalid-feedback">Merci d'indiquer un sujet.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            <div class="invalid-feedback">Merci d'écrire un message.</div>
+          </div>
+
+          <button type="submit" class="btn btn-success w-100">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
