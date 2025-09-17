@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EcoRide - Covoiturage écologique</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script src="./js/bootstrap.bundle.min.js" defer></script>
+  <script type="module" src="./Router/router.js" defer></script>
+</head>
+
+<body>
+  <!-- Navbar Bootstrap -->
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+  <div class="container d-flex align-items-center">
+    <a class="navbar-brand text-white fw-bold me-4" href="#home" data-link>
+      <h2>EcoRide</h2>
+    </a>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
+        <li class="nav-item mx-3">
+<div>
+  <ul class="navbar-nav">
+    <li class="nav-item mx-3">
+      <a href="#covoiturer" data-link class="nav-link text-white">Covoiturer</a>
+    </li>
+    <li class="nav-item mx-3">
+      <a href="#les-trajets" data-link class="nav-link text-white">Les trajets</a>
+    </li>
+    <li class="nav-item mx-3">
+      <a href="#inscription" data-link class="nav-link text-white">Membre</a>
+    </li>
+    <li class="nav-item mx-3">
+      <a href="#contact" data-link class="nav-link text-white">Qui sommes-nous ?</a>
+    </li>
+    <li class="nav-item mx-3">
+      <a href="#connexion" data-link class="nav-link text-white">Connexion</a>
+    </li>
+  </ul>
+  </div>
+</div>
+</div>
+</nav>
+
+
+  <!-- Zone d’injection -->
+  <main id="main-page">
+    <!-- Les pages seront injectées ici -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light pt-3 pb-3">
+    <div class="container">
+      <div class="row gy-3 align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <h5 class="mb-2">
+            <a href="#home" data-link class="text-danger text-decoration-none">EcoRide</a>
+          </h5>
+        </div>
+
+        <!--Les icones sociales-->
+        <div class="col-md-6 text-center text-md-end">
+          <div class="d-flex flex-column align-items-center align-items-md-end">
+            <h6 class="text-uppercase small mb-2 text-danger">Suivez-nous ici !</h6>
+            <div class="social-icons">
+<a href="https://www.facebook.com/" class="text-secondary fs-4 me-3" title="Facebook" target="_blank" rel="noopener">
+  <i class="bi bi-facebook"></i>
+</a>
+<a href="https://www.instagram.com/" class="text-secondary fs-4 me-3" title="Instagram" target="_blank" rel="noopener">
+  <i class="bi bi-instagram"></i>
+</a>
+<a href="https://www.twitter.com/" class="text-secondary fs-4" title="Twitter" target="_blank" rel="noopener">
+  <i class="bi bi-twitter"></i>
+</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-danger mt-3 mb-2">
+      <p class="text-center small mb-0 text-white">&copy; 2025 EcoRide — Tous droits réservés</p>
+    </div>
+  </footer>
+  
+</body>
+</html>

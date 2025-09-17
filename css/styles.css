@@ -1,0 +1,228 @@
+/* ============================================================
+    ECO RIDE – DESIGN SYSTEM
+   ============================================================ */
+
+/* ----- Palette & typographie (Bootstrap overrides + custom) ----- */
+:root {
+  /* Couleurs EcoRide */
+  --bs-primary:   #1b3f15;   /* vert écolo */
+  --bs-secondary: #608260;   /* vert désaturé clair */
+  --bs-success:   #47b951;   /* vert pastel */
+  --bs-danger:    #ffc77e;   /* orange pastel */
+  --bs-dark:      #0f240c;   /* vert foncé */
+  --bs-light:     #f5f0e6;   /* crème */
+
+  /* Versions RGB */
+  --bs-primary-rgb:   42, 122, 11;
+  --bs-secondary-rgb: 96, 130, 96;
+  --bs-success-rgb:   87, 133, 91;
+  --bs-danger-rgb:    255, 199, 126;
+  --bs-dark-rgb:      21, 49, 16;
+  --bs-light-rgb:     245, 240, 230;
+
+  /* Typographie par défaut */
+  --bs-body-font-family: "Roboto", sans-serif;
+  --bs-body-font-size: 16px;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+
+  /* Typo titres (headline) */
+  --eco-headline-font: "Poppins", sans-serif;
+  --eco-headline-weight: 600;
+  --eco-headline-lineheight: 1.2;
+
+  /* Typo boutons / CTA */
+  --eco-button-font: "Poppins", sans-serif;
+  --eco-button-weight: 600;
+}
+
+/* ============================================================
+    TYPOGRAPHIE
+   ============================================================ */
+
+/* Titres généraux (H2, H3, etc.) */
+h2, h3,
+.display-2, .display-3, .display-4 {
+  font-family: var(--eco-headline-font);
+  font-weight: var(--eco-headline-weight);
+  line-height: var(--eco-headline-lineheight);
+  color: var(--bs-primary); /* vert EcoRide */
+}
+
+/* H1 spécifiques (hero titles, etc.) */
+h1, .display-1 {
+  font-family: var(--eco-headline-font);
+  font-weight: var(--eco-headline-weight);
+  line-height: var(--eco-headline-lineheight);
+  color: #fff; /* toujours blanc */
+}
+
+.navbar h2 {
+  color: var(--bs-light) !important;  /* ton crème */
+  opacity: 1; /* enlève toute transparence */
+}
+
+.btn-primary {
+  font-family: var(--eco-button-font);
+  font-weight: var(--eco-button-weight);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  /* Forcer couleurs Bootstrap */
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
+
+  /* États */
+  --bs-btn-hover-bg: color-mix(in srgb, var(--bs-primary) 85%, black);
+  --bs-btn-hover-border-color: color-mix(in srgb, var(--bs-primary) 85%, black);
+  --bs-btn-active-bg: color-mix(in srgb, var(--bs-primary) 80%, black);
+  --bs-btn-active-border-color: color-mix(in srgb, var(--bs-primary) 80%, black);
+}
+
+.btn-secondary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--bs-secondary);
+  --bs-btn-border-color: var(--bs-secondary);
+  --bs-btn-focus-shadow-rgb: var(--bs-secondary-rgb);
+
+  /* États */
+  --bs-btn-hover-bg: color-mix(in srgb, var(--bs-secondary) 85%, black);
+  --bs-btn-hover-border-color: color-mix(in srgb, var(--bs-secondary) 85%, black);
+  --bs-btn-active-bg: color-mix(in srgb, var(--bs-secondary) 80%, black);
+  --bs-btn-active-border-color: color-mix(in srgb, var(--bs-secondary) 80%, black);
+}
+
+/* ============================================================
+    HEROS (bannières par page, version détaillée)
+   ============================================================ */
+
+/* ---- Hero Accueil ---- */
+.hero-home {
+  width: 100%;
+  height: 45vh;
+  background: url("../images/ecoride-hero.jpg") 50% 28% no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero-home h1 {
+  transform: translateY(-25%); /* remonte uniquement le titre */
+  margin-top: 0;
+  margin-bottom: 90px;
+}
+.hero-home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.329);
+}
+.hero-home > div {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Hero Covoiturer ---- */
+.hero-covoiturer {
+  width: 100%;
+  height: 45vh;
+  background: url("../images/hero-covoiturer.jpg") 50% 28% no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero-covoiturer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.hero-covoiturer > div {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Hero Connexion ---- */
+.hero-login {
+  width: 100%;
+  height: 45vh;
+  background: url("../images/hero-login.jpg") 50% 28% no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero-login::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* filtre 50% */
+}
+.hero-login > div {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Hero Contact ---- */
+.hero-contact {
+  width: 100%;
+  height: 45vh;
+  background: url("../images/hero-contact.jpg") 50% 33% no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.hero-contact > div {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Hero Trajets ---- */
+.hero-trajets {
+  width: 100%;
+  height: 45vh;
+  background: url("../images/hero-trajets.jpg") 50% 28% no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* ============================================================
+    RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .hero-home,
+  .hero-covoiturer {
+    height: 50vh; /* plus haut sur mobile */
+  }
+
+  .hero-home h1,
+  .hero-covoiturer h1 {
+    font-size: 2rem;
+  }
+
+  .hero-home p,
+  .hero-covoiturer p {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================================
+    SOCIAL ICONS
+   ============================================================ */
+.social-icons a {
+  display: inline-block;
+  transition: color .2s ease, transform .2s ease;
+}
+.social-icons a:hover {
+  color: var(--bs-secondary);
+  transform: translateY(-2px);
+}
