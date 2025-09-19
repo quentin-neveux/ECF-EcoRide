@@ -48,7 +48,7 @@ const LoadContentPage = async () => {
     document.getElementById("main-page").innerHTML = html;
     document.title = `${actualRoute.title} - ${websiteName}`;
 
-    // ✅ Mets à jour la navbar après le rendu
+    // Mets à jour la navbar après le rendu
     updateActiveNavLink(path);
   } catch (err) {
     console.error(err);
