@@ -19,33 +19,38 @@
   <!-- Navbar Bootstrap -->
 <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
   <div class="container d-flex align-items-center">
-    <a class="navbar-brand text-white fw-bold me-4" href="#home" data-link>
-      <h2>EcoRide</h2>
-    </a>
+    <a class="navbar-brand text-white fw-bold me-4" href="/" data-link><h2>EcoRide</h2></a>
+
+    <!-- Burger -->
+    <button class="navbar-toggler ms-auto ms-sm-0" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Zone repliable -->
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
         <li class="nav-item mx-3">
-          <div>
-            <ul class="navbar-nav">
-              <li class="nav-item mx-3">
-                <a href="#covoiturer" data-link class="nav-link text-white active">Covoiturer</a>
-              </li>
-              <li class="nav-item mx-3">
-                <a href="#les-trajets" data-link class="nav-link text-white active">Les trajets</a>
-              </li>
-              <li class="nav-item mx-3">
-                <a href="#inscription" data-link class="nav-link text-white active">Membre</a>
-              </li>
-              <li class="nav-item mx-3">
-                <a href="#contact" data-link class="nav-link text-white active">Qui sommes-nous ?</a>
-              </li>
-              <li class="nav-item mx-3">
-                <a href="#connexion" data-link class="nav-link text-white active">Connexion</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+          <a href="#covoiturer" data-link class="nav-link text-white">Covoiturer</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="#les-trajets" data-link class="nav-link text-white">Les trajets</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="#inscription" data-link class="nav-link text-white">Membre</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="#contact" data-link class="nav-link text-white">Qui sommes-nous ?</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="#connexion" data-link class="nav-link text-white">Connexion</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 
   <!-- Zone d’injection -->
   <main id="main-page">
