@@ -1,9 +1,13 @@
+<?php
+session_start();
+?>
+
 <!-- Hero Covoiturer -->
 <section class="hero-covoiturer d-flex align-items-center justify-content-center text-center">
   <div class="text-white">
     <h1 class="display-5 fw-bold">Covoiturer, c'est mieux à plusieurs</h1>
     <p class="lead mb-4">Réduisez vos coûts, votre CO₂… et gardez le plaisir de la route.</p>
-    <a href="/inscription" data-link class="btn btn-light btn-lg px-4">Devenir membre</a>
+    <a href="#inscription" data-link class="btn btn-light btn-lg px-4">Devenir membre</a>
   </div>
 </section>
 

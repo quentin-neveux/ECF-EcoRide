@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!-- Hero Trajets -->
 <section class="hero-trajets d-flex align-items-center justify-content-center text-center">
   <div class="text-white">

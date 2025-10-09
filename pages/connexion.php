@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!-- Hero login -->
 <section class="hero-login d-flex align-items-center justify-content-center text-center">
   <div class="text-white">

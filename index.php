@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['prenom'])) {
+    echo "Bonjour " . $_SESSION['prenom'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,7 +26,7 @@
   <!-- Navbar Bootstrap -->
 <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
   <div class="container d-flex align-items-center">
-    <a class="navbar-brand text-white fw-bold me-4" href="/" data-link><h2>EcoRide</h2></a>
+    <a class="navbar-brand text-white fw-bold me-4" href="#home" data-link><h2>EcoRide</h2></a>
 
     <!-- Burger -->
     <button class="navbar-toggler ms-auto ms-sm-0" type="button"

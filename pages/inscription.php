@@ -1,7 +1,9 @@
-<!-- Hero inscription -->
-<section class="hero-inscription d-flex align-items-center justify-content-center text-center">
+<?php
+session_start();
+?>
 
-</section>
+<!-- Hero inscription -->
+<section class="hero-inscription d-flex align-items-center justify-content-center text-center"></section>
 
 <!-- Formulaire -->
 <section class="d-flex align-items-center justify-content-center py-5 bg-light">
@@ -11,7 +13,7 @@
         <div class="card shadow p-4 rounded-4">
           <h2 class="text-center mb-4">Créer un compte</h2>
 
-          <form id="register-form" action="/register-check" method="post" novalidate>
+          <form id="register-form" action="traitement_inscription.php" method="post" novalidate>
             <!-- Identité -->
             <div class="row g-3">
               <div class="col-md-6">
