@@ -1,0 +1,466 @@
+/* ============================================================
+  VARIABLES
+  ============================================================ */
+:root {
+  --bs-primary:   #1b3f15;
+  --bs-secondary: #608260;
+  --bs-success:   #47b951;
+  --bs-danger:    #ffc77e;
+  --bs-dark:      #0f240c;
+  --bs-light:     #f5f0e6;
+
+  --bs-primary-rgb:   42, 122, 11;
+  --bs-secondary-rgb: 96, 130, 96;
+  --bs-success-rgb:   87, 133, 91;
+  --bs-danger-rgb:    255, 199, 126;
+  --bs-dark-rgb:      21, 49, 16;
+  --bs-light-rgb:     245, 240, 230;
+
+  --bs-body-font-family: "Roboto", sans-serif;
+  --bs-body-font-size: 16px;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+
+  --eco-headline-font: "Poppins", sans-serif;
+  --eco-headline-weight: 600;
+  --eco-headline-lineheight: 1.2;
+
+  --eco-button-font: "Poppins", sans-serif;
+  --eco-button-weight: 600;
+}
+
+/* ============================================================
+  TYPOGRAPHY
+  ============================================================ */
+h1, h2, h3,
+.display-1, .display-2, .display-3, .display-4 {
+  font-family: var(--eco-headline-font);
+  font-weight: var(--eco-headline-weight);
+  line-height: var(--eco-headline-lineheight);
+  color: var(--bs-primary);
+}
+
+h1, .display-1 {
+  color: #fff;
+}
+
+.navbar h2 {
+  color: var(--bs-light) !important;
+  opacity: 1;
+}
+
+.navbar-nav .nav-link.active {
+  color: #ffffff !important;
+  border-radius: 8px;
+  background-color: var(--bs-secondary);
+  padding: 6px 12px;
+}
+
+/* ============================================================
+  BUTTONS
+  ============================================================ */
+.btn-primary, .btn-ecoride {
+  font-family: var(--eco-button-font);
+  font-weight: var(--eco-button-weight);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: var(--bs-primary);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover, .btn-ecoride:hover {
+  background-color: #47b951;
+}
+
+.btn-success {
+  background-color: transparent !important;
+  border: none !important;
+  color: #1b3f15;
+  box-shadow: none !important;
+  text-transform: uppercase;
+  font-weight: var(--eco-button-weight);
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active {
+  color: #fff;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* ============================================================
+  HERO SECTIONS
+  ============================================================ */
+.hero-home {
+  width: 100%;
+  height: 45vh;
+  background: url("../images/hero-home2.jpg") 60% 40% no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  overflow: hidden;
+}
+
+.hero-home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-home > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-home h1 {
+  font-size: 3rem;
+  color: var(--bs-danger);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.hero-home h4 {
+  margin-bottom: 1.5rem;
+  color: var(--bs-light);
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Additional hero sections */
+.hero-news,
+.hero-covoiturer,
+.hero-contact,
+.hero-login,
+.hero-inscription,
+.hero-recherche,
+.hero-profil,
+.hero-historique,
+.hero-trajets {
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  z-index: 0;
+}
+
+.hero-news::before,
+.hero-covoiturer::before,
+.hero-contact::before,
+.hero-login::before,
+.hero-inscription::before,
+.hero-recherche::before,
+.hero-profil::before,
+.hero-historique::before,
+.hero-trajets::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.50);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-news > *,
+.hero-covoiturer > *,
+.hero-contact > *,
+.hero-login > *,
+.hero-inscription > *,
+.hero-recherche > *,
+.hero-profil > *,
+.hero-historique > *,
+.hero-trajets > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero background images */
+.hero-news { background-image: url("../images/hero-news.jpg"); background-position: 60% 40%; }
+.hero-covoiturer { background-image: url("../images/hero-covoiturer2.jpg"); background-position: 50% 30%; }
+.hero-contact { background-image: url("../images/hero-contact2.jpg"); background-position: 60% 70%; }
+.hero-login { background-image: url("../images/hero-login.jpg"); background-position: 60% 60%; }
+.hero-inscription { background-image: url("../images/hero-membre2.jpg"); background-position: 60% 40%; }
+.hero-recherche { background-image: url("../images/hero-recherche.jpg"); background-position: 60% 40%; }
+.hero-profil { background-image: url("../images/hero-profil.jpg"); background-position: 60% 40%; }
+.hero-historique { background-image: url("../images/hero-historique.jpg"); background-position: 60% 40%; }
+.hero-trajets { background-image: url("../images/hero-trajets.jpg"); background-position: 60% 40%; }
+
+/* ============================================================
+  SEARCH BAR
+  ============================================================ */
+.eco-searchbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.eco-search-form {
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  display: flex;
+  gap: 0;
+  overflow: hidden;
+  max-width: 1024px;
+  width: 100%;
+}
+
+.eco-search-field {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: transparent;
+  border-right: 1px solid #e0e0e0;
+  flex: 1;
+}
+
+.eco-search-field i {
+  color: var(--bs-secondary);
+  font-size: 1rem;
+}
+
+.eco-search-field input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  font-family: var(--bs-body-font-family);
+}
+
+.eco-search-button {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  border-left: 1px solid #e0e0e0;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.eco-search-button .btn {
+  font-family: var(--eco-button-font);
+  font-weight: var(--eco-button-weight);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background-color: var(--bs-primary);
+}
+
+/* ============================================================
+   ARTICLES / CARDS
+   ============================================================ */
+
+/* Image en haut de la carte */
+.news-thumb,
+.card-img-top {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.8);
+  transition: filter 0.3s ease, transform 0.3s ease;
+  object-fit: cover;
+}
+
+/* Effet au survol de la carte */
+.card:hover .news-thumb,
+.card:hover .card-img-top {
+  filter: brightness(1);
+  transform: scale(1.05);
+}
+
+/* Style du badge */
+.card .badge {
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Structure générale de la carte */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 480px;
+  height: 100%;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Animation subtile au survol */
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Corps de la carte : texte + bouton */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+/* Bouton "Lire l’article" toujours en bas à droite */
+.card-body .btn {
+  align-self: flex-end;
+  margin-top: auto;
+  transition: all 0.3s ease;
+}
+
+/* Hover sur le bouton : effet subtil */
+.card-body .btn:hover {
+  background-color: var(--bs-success);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   Images fixes par carte (sécurité d'affichage garantie)
+   ========================================================== */
+.card.trip-1 { background-image: url('../images/villes/lyon.jpg'); }
+.card.trip-2 { background-image: url('../images/villes/marseille.jpg'); }
+.card.trip-3 { background-image: url('../images/villes/paris.jpg'); }
+.card.trip-4 { background-image: url('../images/villes/marseille.jpg'); }
+.card.trip-5 { background-image: url('../images/villes/geneve.jpg'); }
+.card.trip-6 { background-image: url('../images/villes/bordeaux.jpg'); }
+.card.trip-7 { background-image: url('../images/villes/grenoble.jpg'); }
+.card.trip-8 { background-image: url('../images/villes/rouen.jpg'); }
+.card.trip-9 { background-image: url('../images/villes/rennes.jpg'); }
+
+/* Style commun */
+.card[class*="trip-"] {
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card[class*="trip-"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+  transition: background 0.3s ease;
+}
+
+.card[class*="trip-"]:hover::before {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.card[class*="trip-"] .card-body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ============================================================
+   RÉSEAUX SOCIAUX
+   ============================================================ */
+.social-icons a {
+  cursor:pointer;
+  will-change: transform;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  line-height: 1;
+  vertical-align: middle;
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s ease, transform 0.2s ease;
+  will-change: transform; /* optimisation GPU */
+}
+
+.social-icons a:hover {
+  color: var(--bs-secondary); /* ton vert clair */
+  transform: translateY(-2px);
+}
+
+.social-icons a:hover::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(137,174,255,0.3) 0%, transparent 70%);
+  transform: scale(0.8);
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.social-icons a:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+
+/* ============================================================
+  RESPONSIVE
+  ============================================================ */
+@media (max-width: 768px) {
+  .hero-home {
+   height: auto;
+   padding: 3rem 1rem;
+  }
+  .hero-home h1 {
+   font-size: 2rem;
+  }
+  .hero-home h4 {
+   font-size: 1rem;
+  }
+  .eco-search-form {
+   flex-direction: column;
+   border-radius: 1rem;
+  }
+  .eco-search-field,
+  .eco-search-button {
+   border: none !important;
+   width: 100%;
+   padding: 0.75rem 1rem;
+  }
+  .eco-search-button .btn {
+   width: 100%;
+  }
+}

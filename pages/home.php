@@ -1,6 +1,9 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
+
 <!-- Hero -->
 <section class="hero-home text-white text-center position-relative d-flex flex-column justify-content-between">
   <!-- Bloc titres centré -->
@@ -9,28 +12,28 @@ session_start();
   <h4>Changeons d'air, pas de Terre.</h4>
 </div>
 
-  <!-- Formulaire positionné en bas -->
-  <div class="eco-searchbar">
-    <form class="eco-search-form mx-auto">
-      <div class="row g-0">
-        <div class="col eco-search-field rounded-start d-flex align-items-center">
-          <i class="fa-solid fa-location-dot me-2"></i>
-          <input type="text" name="depart" placeholder="Départ" required class="form-control border-0 bg-transparent">
-        </div>
-        <div class="col eco-search-field d-flex align-items-center">
-          <i class="fa-solid fa-location-arrow me-2"></i>
-          <input type="text" name="arrivee" placeholder="Arrivée" required class="form-control border-0 bg-transparent">
-        </div>
-        <div class="col eco-search-field d-flex align-items-center">
-          <i class="fa-regular fa-calendar me-2"></i>
-          <input type="date" name="date" required class="form-control border-0 bg-transparent">
-        </div>
-        <div class="col-auto eco-search-button rounded-end d-flex align-items-center">
-          <button type="submit" class="btn btn-ecoride">Rechercher</button>
-        </div>
+<!-- Barre de recherche EcoRide -->
+<div class="eco-searchbar">
+  <form id="search-form" class="eco-search-form mx-auto" action="/pages/recherche.php" method="get">
+    <div class="row g-0">
+      <div class="col eco-search-field rounded-start d-flex align-items-center">
+        <i class="fa-solid fa-location-dot me-2"></i>
+        <input type="text" id="ville_depart" name="depart" placeholder="Départ" required class="form-control border-0 bg-transparent">
       </div>
-    </form>
-  </div>
+      <div class="col eco-search-field d-flex align-items-center">
+        <i class="fa-solid fa-location-arrow me-2"></i>
+        <input type="text" id="ville_arrivee" name="arrivee" placeholder="Arrivée"  class="form-control border-0 bg-transparent">
+      </div>
+      <div class="col eco-search-field d-flex align-items-center">
+        <i class="fa-regular fa-calendar me-2"></i>
+        <input type="date" id="date_depart" name="date" class="form-control border-0 bg-transparent">
+      </div>
+      <div class="col-auto eco-search-button rounded-end d-flex align-items-center">
+        <button type="submit" class="btn btn-ecoride">Rechercher</button>
+      </div>
+    </div>
+  </form>
+</div>
 </section>
 
 <!-- Présentation -->
@@ -61,5 +64,9 @@ session_start();
   </div>
 </section>
 
+<!-- Résultats de recherche -->
+<div id="results" class="container mt-4"></div>
+
+<script src="assets/js/home-search.js" defer></script>
 </body>
 </html>
